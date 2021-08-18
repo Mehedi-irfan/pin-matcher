@@ -26,3 +26,17 @@ document.getElementById('key-pad').addEventListener('click', function(event){
     calcInput.value = newNumber;
     }
 })
+function veryfiPin(){
+    const pin = document.getElementById('generate-input').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    const matchNotification = document.getElementById('notify-success');
+    const faildNotification = document.getElementById('notify-faild');
+    if(pin == typedNumbers){
+        matchNotification.style.display = 'block';
+        faildNotification.style.display = 'none';
+    }
+    else{
+        matchNotification.style.display = 'none';
+        faildNotification.style.display = 'block';
+    }
+}
